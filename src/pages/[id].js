@@ -76,7 +76,6 @@ export default function ProductDetails() {
                   >
                     Add to Cart
                   </button>
-                  AiOutlineShoppingCart
                 </span>
               </div>
             </div>
