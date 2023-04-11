@@ -9,6 +9,7 @@ import { addToCart } from "@/actions";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import Image from "next/image";
 
 export default function ProductDetails() {
   const router = useRouter();
@@ -46,7 +47,12 @@ export default function ProductDetails() {
                 nextArrow={<div className="slick-next">next</div>}
               >
                 {product.images.map((image) => (
-                  <img src={image} alt={product.name} />
+                  <Image
+                    src={image}
+                    alt={product.name}
+                    width={450}
+                    height={325}
+                  />
                 ))}
               </Slider>
             </div>

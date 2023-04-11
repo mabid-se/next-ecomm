@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/actions";
+import Image from "next/image";
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
@@ -10,11 +11,16 @@ const Product = ({ product }) => {
 
   return (
     <>
-      <div className="block max-w-sm rounded-xl bg-white shadow-xl dark:bg-neutral-700">
-        <Link key={product.id} href={`/${product.id}`}>
-          <img
+      <div
+        key={product.id}
+        className="block max-w-sm rounded-xl bg-white shadow-xl dark:bg-neutral-700"
+      >
+        <Link href={`/${product.id}`}>
+          <Image
             src={product.images[0]}
             alt={product.title}
+            width={325}
+            height={250}
             className="w-full h-48 object-cover"
           />
         </Link>
@@ -22,7 +28,7 @@ const Product = ({ product }) => {
         <div className="p-5">
           <div className="grid grid-flow-col ">
             <div>
-              <Link key={product.id} href={`/${product.id}`}>
+              <Link href={`/${product.id}`}>
                 <h4 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                   {product.title}
                 </h4>
