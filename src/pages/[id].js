@@ -48,6 +48,7 @@ export default function ProductDetails() {
               >
                 {product.images.map((image) => (
                   <Image
+                    key={product.id}
                     src={image}
                     alt={product.name}
                     width={450}
