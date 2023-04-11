@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { color:'#000' }
+  
+.item {
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.disabled-page {
+  color: #808e9b;
+}
+
+.active {
+  border: solid 1px#3B82F6;
+  border-radius: 40px;
+  color: #3B82F6;
+}
+
+.next {
+  color: #000; font-size: 16px;
+  height: 60px;
+  right: 0;
+  width: 150px;
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+  list-style-type: none;
+  position: relative;
+  width: 1000px;
+}
+
+.pagination-page {
+  font-weight: 700;
+}
+
+.previous {
+  color: #000; font-size: 16px;  
+  height: 60px;
+  left: 0;
+  width: 150px;
+}
+
+
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-slider .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-slider .slick-list:focus {
+  outline: none;
+}
+
+.slick-slider .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-slide {
+  display: block;
+}
+
+.slick-slider .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  align-items: center;
+}
+
+.slick-slider .slick-track:before,
+.slick-slider .slick-track:after {
+  display: table;
+  content: '';
+}
+
+.slick-slider .slick-track:after {
+  clear: both;
+}
+
+.slick-slider .slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.slick-slider .slick-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+    
